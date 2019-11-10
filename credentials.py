@@ -9,3 +9,11 @@ class Credentials:
 
         self.account_name = account_name
         self.password = password
+
+    @classmethod
+    def view_credentials(cls):
+        '''
+        method to view credentials list
+        '''
+
+        return cls.credentials_list

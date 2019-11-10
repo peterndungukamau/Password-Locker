@@ -47,5 +47,11 @@ class TestUser(unittest.TestCase):
 
         self.assertEqual(User.view_users(), User.user_list)
 
+    def test_view_credentials(self):
+        '''
+        method to view user credentials
+        '''
+
+        self.assertEqual(Credentials.view_credentials, Credentials.credentials_list)
 if __name__== '__main__':
     unittest.main()
