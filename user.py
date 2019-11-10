@@ -12,3 +12,11 @@ class User:
         self.username = username
 
 
+    @classmethod
+    def view_users(cls):
+        '''
+        method to view users list
+        '''
+
+        return cls.user_list
+
