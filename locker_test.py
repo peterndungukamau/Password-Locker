@@ -72,5 +72,39 @@ class TestUser(unittest.TestCase):
 
         self.assertEqual(len(User.user_list), 1)
 
+    def tearDown(self):
+        '''
+        Clean up for tests
+        '''
+
+        Credentials.credential_list = []
+
+        User.user_list = []
+
+    def test_save_mulltiple_credentials(self):
+        '''
+        test_save_multiple credentials to check if we can save multiple credentials object to our credentials_list
+        '''
+
+        self.new_credentials.save_credentials()
+        test_credentials = Credentials("Ig", "32667843")
+        test_credentials.save_credentials()
+
+        self.assertEqual(len(Credentials.credential_list), 2)
+
+
+
+
+    def test_save_multiple_user(self):
+        '''
+        test to check if we can save multiple users object to our user_list
+        '''
+
+        self.new_user.save_user()
+        test_user = User("Ado", "Pass", "Philly")
+        test_user.save_user()
+
+        self.assertEqual(len(User.user_list), 2)
+
 if __name__== '__main__':
     unittest.main()
