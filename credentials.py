@@ -1,3 +1,5 @@
+import os
+
 class Credentials:
     """
     Class that generates new instances of credentials
@@ -11,6 +13,9 @@ class Credentials:
         self.password = password
 
 
+    def __repr__(self):
+        return "%s %s" %(self.account_name,self.password)
+
     def save_credentials(self):
         '''
         save_credentials method that saves credential object into credentials_list
@@ -18,6 +23,13 @@ class Credentials:
 
         Credentials.credential_list.append(self)
 
+    def generate_password(self):
+        '''
+
+
+        '''
+
+        return os.urandom(8)
     @classmethod
     def view_credentials(cls):
         '''
@@ -25,3 +37,10 @@ class Credentials:
         '''
 
         return cls.credential_list
+
+    def delete_credentials(self):
+        '''
+        delete method for deleting credential_list
+        '''
+
+        Credentials.credential_list.remove(self)

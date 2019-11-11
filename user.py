@@ -18,6 +18,15 @@ class User:
 
         User.user_list.append(self)
 
+    def delete_user(self):
+        '''
+        delete method for deleting user_list
+        '''
+
+        User.user_list.remove(self)
+
+
+
 
 
 
