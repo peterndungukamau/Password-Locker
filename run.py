@@ -24,7 +24,7 @@ if have_account == "yes":
     Credentials.credential_list.append(user_credentials)
     print(user_credentials)
     while proceed:
-        print("other accounts")
+        print("Do you have other accounts?")
         no_account = input()
         if no_account == "no":
             proceed= False
