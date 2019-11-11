@@ -4,11 +4,11 @@ from credentials import Credentials
 print("Hello! Welcome to Password Locker app where passwords are found")
 
 # login in to password locker application with username and password
-print("Do you own an Account?If Yes kindly enter your username below")
+print("kindly enter your firstname as your username below and choose a password")
 user_name = input()
 print("Password")
 password_locker = input()
-print("login successful")
+print("login successful You have an account")
 print(f"Welcome {user_name} How may i help you?")
 
 print("Do you have an existing account? Yes or No?")
@@ -24,7 +24,7 @@ if have_account == "yes":
     Credentials.credential_list.append(user_credentials)
     print(user_credentials)
     while proceed:
-        print("Do you have other accounts?")
+        print("Do you have other accounts?Yes or No")
         no_account = input()
         if no_account == "no":
             proceed= False
@@ -34,9 +34,6 @@ if have_account == "yes":
             print("Enter Password")
             password = input()
 
-
-    # account_name = input()
-    # password = input()
 
 
 
