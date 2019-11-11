@@ -8,7 +8,7 @@ print("kindly enter your firstname as your username below and choose a password"
 user_name = input()
 print("Password")
 password_locker = input()
-print("login successful You have an account")
+print("You have successful created  an account")
 print(f"Welcome {user_name} How may i help you?")
 
 print("Do you have an existing account? Yes or No?")
@@ -34,7 +34,8 @@ if have_account == "yes":
             print("Enter Password")
             password = input()
 
-
+    for user_credentials in user_credentials:
+        print(user_credentials)
 
 
 

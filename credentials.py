@@ -14,7 +14,7 @@ class Credentials:
 
 
     def __repr__(self):
-        return "%s %s" %(self.account_name,self.password)
+        return "accountname: %s password: %s" %(self.account_name,self.password)
 
     def save_credentials(self):
         '''
