@@ -52,6 +52,16 @@ class TestUser(unittest.TestCase):
         method to view user credentials
         '''
 
-        self.assertEqual(Credentials.view_credentials, Credentials.credentials_list)
+        self.assertEqual(Credentials.view_credentials(), Credentials.credential_list)
+
+    def test_save_credentials(self):
+        '''
+        test to see if credential object is saved into the credential list
+        '''
+
+        self.new_credentials.save_credentials()
+
+        self.assertEqual(len(Credentials.credential_list), 1)
+
 if __name__== '__main__':
     unittest.main()
