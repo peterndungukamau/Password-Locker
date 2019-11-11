@@ -27,7 +27,7 @@ def generate_password(self):
         return os.urandom(8)
 
 
-if have_account == "yes":
+if have_account == "Yes":
     proceed =True
     print("Enter Your Account name and password")
     print("Enter Account Name")
@@ -40,7 +40,7 @@ if have_account == "yes":
     while proceed:
         print("Do you have other accounts?Yes or No")
         no_account = input()
-        if no_account == "no":
+        if no_account == "No":
             proceed= False
         else:
             print("Enter Account Name")
@@ -58,7 +58,7 @@ if have_account == "yes":
     if gen == "Yes":
         print(user_credentials)
 
-    print()
+
 
 
 
