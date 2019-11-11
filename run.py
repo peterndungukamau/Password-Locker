@@ -1,4 +1,6 @@
 #!/usr/bin/env python3.6
+import os
+
 import pyperclip
 from credentials import Credentials
 
@@ -14,6 +16,17 @@ print(f"Welcome {user_name} How may i help you?")
 
 print("Do you have an existing account? Yes or No?")
 have_account = input()
+
+
+def generate_password(self):
+        '''
+
+         generate password
+        '''
+
+        return os.urandom(8)
+
+
 if have_account == "yes":
     proceed =True
     print("Enter Your Account name and password")
@@ -35,8 +48,18 @@ if have_account == "yes":
             print("Enter Password")
             password = input()
 
-    for user_credentials in user_credentials:
+    print("Create new Account")
+    accept = input()
+    if accept == "Yes":
+        print("Enter Account Name")
+        acc = input()
+    print("Would You like us to generate a Password for you or input?Yes or No?")
+    gen = input()
+    if gen == "Yes":
         print(user_credentials)
+
+    print()
+
 
 
 

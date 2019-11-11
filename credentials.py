@@ -26,7 +26,7 @@ class Credentials:
     def generate_password(self):
         '''
 
-
+         generate password
         '''
 
         return os.urandom(8)
