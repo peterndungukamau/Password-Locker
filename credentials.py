@@ -1,4 +1,4 @@
-import os
+
 
 class Credentials:
     """
@@ -23,13 +23,6 @@ class Credentials:
 
         Credentials.credential_list.append(self)
 
-    def generate_password(self):
-        '''
-
-         generate password
-        '''
-
-        return os.urandom(8)
     @classmethod
     def view_credentials(cls):
         '''
